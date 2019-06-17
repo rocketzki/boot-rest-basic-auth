@@ -25,7 +25,7 @@ public class LaptopService {
     }
 
     public void addLaptop(Laptop laptop) {
-        repo.getItems().add(laptop);
+        repo.addItem(laptop);
     }
 
     public Laptop getById(Integer id) {

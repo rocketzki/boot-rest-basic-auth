@@ -7,6 +7,10 @@ public class Laptop {
     private Double price;
     private String processorManufacturer;
 
+    public Laptop() {
+
+    }
+
     public Laptop(String producer, String model, Double price, String processorManufacturer) {
         this.model = model;
         this.producer = producer;
@@ -28,5 +32,15 @@ public class Laptop {
 
     public String getProcessorManufacturer() {
         return processorManufacturer;
+    }
+
+    @Override
+    public String toString() {
+        return "Laptop{" +
+                "producer='" + producer + '\'' +
+                ", model='" + model + '\'' +
+                ", price=" + price +
+                ", processorManufacturer='" + processorManufacturer + '\'' +
+                '}';
     }
 }

@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/rest")
@@ -34,9 +35,9 @@ public class LaptopController {
     @PostMapping("/laptop/add")
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
-    public String addOne(@RequestBody Laptop laptop) {
+    public Map addOne(@RequestBody Laptop laptop) {
         laptopService.addLaptop(laptop);
-        return "Laptop: " + laptop.toString() + " has been added.";
+        return Map.of("massage", "Laptop: " + laptop.toString() + " has been added.");
     }
 
 
