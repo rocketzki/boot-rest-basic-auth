@@ -11,12 +11,12 @@ import java.util.NoSuchElementException;
 public class ErrorController {
 
     @GetMapping("/error")
-    public Map error() {
+    public Map handleError() {
         return Map.of("error", "An error occurred.");
     }
 
     @ExceptionHandler(NoSuchElementException.class)
-    public Map noElementException(NoSuchElementException ex) {
+    public Map handleNoElementException(NoSuchElementException ex) {
         return Map.of("error", ex.toString());
 
     }
